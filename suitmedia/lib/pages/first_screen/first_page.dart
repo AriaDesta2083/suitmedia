@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:suitmedia/models/users.dart';
 import 'package:suitmedia/pages/first_screen/first_widget.dart';
 
 class FirstPage extends StatelessWidget {
@@ -6,6 +7,7 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
           child: Stack(

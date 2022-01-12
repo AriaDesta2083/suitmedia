@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const String nameNull = "Name Can't be empty";
 const String palindromeNull = "Palindrome Can't be empty";
 
+
 class FormError extends StatelessWidget {
   const FormError({
     Key? key,

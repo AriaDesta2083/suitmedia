@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:suitmedia/models/users.dart';
 import 'package:suitmedia/theme.dart';
 
 class CardItem extends StatelessWidget {
-  const CardItem({Key? key}) : super(key: key);
+  final UserData user;
+  CardItem(this.user);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class CardItem extends StatelessWidget {
               height: 49,
               width: 49,
               child: CircleAvatar(
-                backgroundColor: Colors.amber,
+                backgroundImage: NetworkImage(user.avatar),
               ),
             ),
             SizedBox(
@@ -28,14 +30,14 @@ class CardItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Aria Desta Prabu',
+                  user.first_name + ' ' + user.last_name,
                   style: myAppTextStyle,
                 ),
                 SizedBox(
                   height: 2,
                 ),
                 Text(
-                  'Aria@Mail.com'.toUpperCase(),
+                  user.email,
                   style: myButtonTextStyle.copyWith(
                       color: Color(0xFF686777), fontSize: 11),
                 )
